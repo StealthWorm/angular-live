@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Commands
+
+- ng generate component <name> <diretorio> - se não passar um direotrio ele cria dentro da pasta "app" por padrão
+- ng generate service <name>
+
+## life cycle
+
+- ngOnChanges() - é chamado toda vez que uma propriedade input é setada ou atualizada
+- ngOnInit() - é chamado na inicialização do componente. É um bom lugar para o componente fazer o fetch dos dados iniciais
+- ngAfterViewInit() - é chamado logo após o componente realizar a primeira renderização, e a renderização de todos seus filhos.
+- ngOnDestroy() - é chamado pouco antes do angular destruir a diretiva ou componente. Usado para propositos de cleanup como unsubscribe.
+
+## Input & Output
+
+- @Input
+- @Output

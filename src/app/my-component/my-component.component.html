@@ -1,0 +1,8 @@
+<p>my-component works!</p>
+
+<!-- o pipe inidica que os dados serão assincronos e que nem sempre estarão disponíveis -->
+<li *ngFor="let product of products$ | async">
+  {{product.thumb}}
+</li>
+
+<button (click)="onClick()">FILTRO</button>
