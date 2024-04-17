@@ -7,11 +7,13 @@ import { MyComponentComponent } from './my-component/my-component.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './services/products.service';
 import { CommonModule } from '@angular/common';
+import { SecondComponentComponent } from './second-component/second-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyComponentComponent // declara os componentes do modulo
+    MyComponentComponent,
+    SecondComponentComponent // declara os componentes do modulo. Pode ser declarado um modulo especifico por componente
   ],
   imports: [
     BrowserModule,

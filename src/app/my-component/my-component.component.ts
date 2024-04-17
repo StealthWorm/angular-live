@@ -18,6 +18,8 @@ export class MyComponentComponent implements OnInit {
   // o "$" na variavel indica que ele é assincrono e é um Observable, não é obrigatório ,mas usamos por padrão
   products$: Observable<Product[]> = new Observable<Product[]>();
 
+  nomeVar = "conteudo da variavel nomeVar dentro do componente my-component"
+
   constructor(
     private productsService: ProductsService
   ) { }
@@ -32,10 +34,15 @@ export class MyComponentComponent implements OnInit {
   }
 
   onClick() {
-    this.products$ = this.productsService.getDataFiltered("filtro").pipe(
+    this.products$ = this.productsService.getDataFiltered("").pipe(
       map(response => {
         return response.data.body.list;
       })
     )
+  }
+
+  //trata o eventemitter que veio do filho
+  handleEvent($event: string) {
+    window.alert($event)
   }
 }

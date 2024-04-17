@@ -1,8 +1,16 @@
 <p>my-component works!</p>
 
 <!-- o pipe inidica que os dados serão assincronos e que nem sempre estarão disponíveis -->
-<li *ngFor="let product of products$ | async">
+<!-- <li *ngFor="let product of products$ | async">
   {{product.thumb}}
-</li>
+</li> -->
 
 <button (click)="onClick()">FILTRO</button>
+
+<!-- o colchetes [] indica um data binding , informando que a var my-prop vai receber o conteudo que esta na variavel "var"-->
+<!-- sem o colchetes ele vai entender como umas string fixa e mostraria "nomeVar" -->
+<!-- $event indica o retorno do emmiter do second-component -->
+<app-second-component
+  [my-prop]="nomeVar"
+  myProp2="lalala"
+  (myEvent)="handleEvent($event)"></app-second-component>

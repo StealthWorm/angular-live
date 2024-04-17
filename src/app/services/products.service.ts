@@ -31,7 +31,7 @@ export class ProductsService {
         console.log(response)
         return response.map((item, index) => ({
           id: index.toString(),
-          thumb: 'https://picsum.photos/200',
+          thumb: 'asasas',
           name: `Image ${index + 1}`,
         }));
       })
